@@ -27,7 +27,7 @@ function enviaPeticionGetXMLHttp(){
       //console.log("El recurso no existe")
     }
   }
-  xmlHttp.send("c1="+c1+"&c2="+c2+"&c3="+c3+"&c4="+c4);
+  xmlHttp.send();
 }
 
 function validateThisInput(num){
