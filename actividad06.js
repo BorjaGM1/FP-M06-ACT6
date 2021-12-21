@@ -42,6 +42,7 @@ function validateThisInput(num){
       bro.innerHTML=this.responseText
     }
   }
-  xmlhttp.open("POST","r2.php?q="+num,true);
-  xmlhttp.send();
+  xmlhttp.open("POST","r2.php",true);
+  xmlhttp.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+  xmlhttp.send("q="+num);
 }
