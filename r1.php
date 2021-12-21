@@ -1,7 +1,5 @@
 <?php
 session_start();
-$s1er = $s2er = $s3er = $s4er ="";
-$s1 = $s2 = $s3 = $s4 ="";
 if (isset($_SESSION["contador"])) {
     $contador = $_SESSION["contador"];
 } else {$contador = 0;}
