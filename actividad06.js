@@ -1,3 +1,11 @@
+ /*document.querySelectorAll("input").forEach(item =>{
+  item.addEventListener("keyup", event =>{
+      validateThisInput(this.value, this)
+    }
+    )
+  }
+)*/
+
 function enviaPeticionGetXMLHttp(){
   let c1 = document.getElementById("c1").value;
   let c2 = document.getElementById("c2").value;
@@ -30,8 +38,8 @@ function enviaPeticionGetXMLHttp(){
   xmlHttp.send("c1="+c1+"&c2="+c2+"&c3="+c3+"&c4="+c4);
 }
 
-function validateThisInput(num){
-  let bro = document.getElementById("c1").nextElementSibling;
+function validateThisInput(num, obj){
+  let bro = document.getElementById(obj.id).nextElementSibling;
   if (num.length===0){
     bro.innerHTML = "";
     return;
