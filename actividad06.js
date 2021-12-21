@@ -1,12 +1,4 @@
- /*document.querySelectorAll("input").forEach(item =>{
-  item.addEventListener("keyup", event =>{
-      validateThisInput(this.value, this)
-    }
-    )
-  }
-)*/
-
-function enviaPeticionGetXMLHttp(){
+function save(){
   let c1 = document.getElementById("c1").value;
   let c2 = document.getElementById("c2").value;
   let c3 = document.getElementById("c3").value;
@@ -19,8 +11,6 @@ function enviaPeticionGetXMLHttp(){
         console.log("El recurso SI existe")
         let JSONansw = JSON.stringify(xmlHttp.responseText);
         console.log(JSONansw)
-
-
     }else{
       //console.log("El recurso no existe")
     }
@@ -44,3 +34,18 @@ function validateThisInput(num, obj){
   xmlhttp.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
   xmlhttp.send("q="+num);
 }
+
+
+
+
+
+
+
+
+/*document.querySelectorAll("input").forEach(item =>{
+ item.addEventListener("keyup", event =>{
+     validateThisInput(this.value, this)
+   }
+   )
+ }
+)*/
