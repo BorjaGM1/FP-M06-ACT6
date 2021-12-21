@@ -19,16 +19,6 @@ function enviaPeticionGetXMLHttp(){
         console.log("El recurso SI existe")
         let JSONansw = JSON.stringify(xmlHttp.responseText);
         console.log(JSONansw)
-        let error1 = JSONansw.substr(73, 22);
-        if (error1 === "value is required"){
-          document.getElementById("s1").innerHTML = error1;
-        }
-        if (error1 === "value is required"){
-          document.getElementById("s1").innerHTML = error1;
-        }
-        if (error1 === "value is required"){
-          document.getElementById("s1").innerHTML = error1;
-        }
 
 
     }else{
