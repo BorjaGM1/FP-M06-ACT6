@@ -6,6 +6,7 @@ if ($q < $a){
     $response="number must be positive";
 }else if ($q > $b){
     $response="number must be only one digit";
-}
-echo $response;
+}else {$response="nice!";}
+    echo $response;
+
 ?>

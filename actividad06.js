@@ -8,11 +8,6 @@ function save(){
   xmlHttp.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
   xmlHttp.onreadystatechange = function(){
     if(this.readyState===4 && this.status===200){
-        console.log("El recurso SI existe")
-        let JSONansw = JSON.stringify(xmlHttp.responseText);
-        console.log(JSONansw)
-    }else{
-      //console.log("El recurso no existe")
     }
   }
   xmlHttp.send("c1="+c1+"&c2="+c2+"&c3="+c3+"&c4="+c4);
