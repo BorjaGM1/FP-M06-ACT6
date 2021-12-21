@@ -1,4 +1,4 @@
-function save(){
+function save(obj){
   let c1 = document.getElementById("c1").value;
   let c2 = document.getElementById("c2").value;
   let c3 = document.getElementById("c3").value;
@@ -8,6 +8,7 @@ function save(){
   xmlHttp.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
   xmlHttp.onreadystatechange = function(){
     if(this.readyState===4 && this.status===200){
+      document.getElementById(obj.id).nextElementSibling.innerHTML=this.responseText
     }
   }
   xmlHttp.send("c1="+c1+"&c2="+c2+"&c3="+c3+"&c4="+c4);
