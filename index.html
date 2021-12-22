@@ -16,10 +16,10 @@ GUARDAR COMBINACION<br/>
 <button id="i1" onclick="save(this)">GUARDAR COMBINACION</button><span></span><br/>
 <br/>
 CHECK COMBINACION<br/>
-<input type="number" id="c5"><input type="number" id="c6"><input type="number" id="c7"><input type="number" id="c8"><br/>
-<button onclick="sendAJAX2()">CHECK COMBINACION</button><br/>
-
-
-
+<input type="number" id="c5" onkeyup="inputFetch(this.value, this)"><span></span>
+<input type="number" id="c6" onkeyup="inputFetch(this.value, this)"><span></span>
+<input type="number" id="c7" onkeyup="inputFetch(this.value, this)"><span></span>
+<input type="number" id="c8" onkeyup="inputFetch(this.value, this)"><span></span><br/>
+<button id="i2" onclick="check(this)">CHECK COMBINACION</button><span></span><br/>
 </body>
 </html>

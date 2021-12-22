@@ -31,6 +31,52 @@ function validateThisInput(num, obj){
   xmlhttp.send("q="+num);
 }
 
+function inputFetch(num, obj){
+  let configFetch	=	{
+    method:	"POST",
+    headers:	{	'Content-Type':	'application/x-www-form-urlencoded' },
+    body:	"q="+num+"&id="+obj.id
+  }
+  let promesa = fetch("r3.php",configFetch);
+  promesa.then(
+    function(response){
+      response.text().then(
+        function (texto){
+          let bro = document.getElementById(obj.id).nextElementSibling;
+          if (num.length===0){
+            bro.innerHTML = "";
+          }else{
+            bro.innerHTML=texto;
+          }
+        }
+      )
+  }
+  )
+}
+
+function check(obj){
+  let c5 = document.getElementById("c5").value;
+  let c6 = document.getElementById("c6").value;
+  let c7 = document.getElementById("c7").value;
+  let c8 = document.getElementById("c8").value;
+  let configFetch	=	{
+    method:	"POST",
+    headers:	{	'Content-Type':	'application/x-www-form-urlencoded' },
+    body:	"c5="+c5+"&c6="+c6+"&c7="+c7+"&c8="+c8
+  }
+  let promesa = fetch("r4.php",configFetch);
+  promesa.then(
+    function(response){
+      response.text().then(
+        function (texto){
+          let bro = document.getElementById(obj.id).nextElementSibling;
+            bro.innerHTML=texto;
+        }
+      )
+    }
+  )
+}
+
 
 
 
